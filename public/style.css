@@ -1,1 +1,17 @@
-//
+h1 {
+    color: blue;
+}
+
+.grid-container {
+    display: grid;
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: auto;
+    grid-template-columns: 33% 33% 33%;
+    /* grid-template-rows: 33% 33% 33% */
+}
+.grid-container div {
+    border: 1px solid black;
+    height: 20vh;
+    width: 20vh%;
+}
