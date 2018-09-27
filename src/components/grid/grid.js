@@ -2,18 +2,69 @@ import React from "react";
 import mole from "../../../public/icons/mole.jpg";
 import hole from "../../../public/icons/hole.png";
 
+
 class Grid extends React.Component {
   
   state = {
-    mole1: 'mole',
-    mole2: 'mole',
-    mole3: 'mole',
-    mole4: 'mole',
-    mole5: 'mole',
-    mole6: 'mole',
-    mole7: 'mole',
-    mole8: 'mole',
-    mole9: 'mole',
+    mole1: 'hiddenMole',
+    mole2: 'hiddenMole',
+    mole3: 'hiddenMole',
+    mole4: 'hiddenMole',
+    mole5: 'hiddenMole',
+    mole6: 'hiddenMole',
+    mole7: 'hiddenMole',
+    mole8: 'hiddenMole',
+    mole9: 'hiddenMole',
+    moletime: 300,
+    mRunning: false,
+    moleRay: ['mole1', 'mole2', 'mole3', 'mole4', 'mole5', 'mole6', 'mole7', 'mole8', 'mole9'],
+    moleRay2: [],
+  }
+  moleSeconds = () => {
+    return Math.floor(this.state.moletime/100);
+  }
+  moleMSeconds = () => {
+    return ('0' + this.state.moletime%100).slice(-2);
+  }
+  moleSpawn = () => {
+    const pos = Math.floor(this.state.moleRay.length * Math.random());
+    let change = this.state.moleRay[pos];
+    // this.setState({moleRay2: this.state.moleRay2.push(this.state.moleRay.splice(pos,1))});
+    this.setState({moleRay: this.state.moleRay.filter(word =>  word!==change)});
+    console.log(this.state.moleRay);
+    
+    console.log(this.state.moleRay2)
+    this.setState({change: 'mole'});
+  }
+  moleTimer = () => {
+    this.setState(prevState => {
+      const _this = this;
+        let startTime = Date.now() - prevState.moletime;
+        let count = 50;
+        let setTime = 300;
+        this.moleTimer = setInterval(() => {
+            
+            if(_this.state.moletime>0 && count>0){
+          this.setState({ moletime: Math.ceil(setTime- (Date.now() - startTime)/10) });
+          console.log('success');
+          
+        }
+        else {
+            this.moleSpawn()
+            console.log(Math.floor(this.state.moleRay.length * Math.random()));
+            if(count !== 0){
+            setTime = 50+150*Math.random();
+            startTime =Date.now() - prevState.moletime;
+            console.log(setTime);
+            this.setState({moletime: setTime});
+            }
+        }
+        
+        }, 100);
+      
+      return { mRunning: !prevState.mRunning };
+      }
+    )
   }
   whacked1 = () => {
     console.log('workin');
@@ -63,7 +114,13 @@ class Grid extends React.Component {
 
   render() {
     return (
+      <div>
+        <h1>{this.moleSeconds()}:{this.moleMSeconds()}</h1>
+      <button onClick={this.moleTimer}>
+        {this.state.running ? 'Pause' : 'Start'}
+      </button>
       <div className="grid-container">
+      
         <div id="box-1">
           <div  className="mole-hole">
           {
@@ -137,6 +194,7 @@ class Grid extends React.Component {
             <img src={hole} />
           </div>
         </div>
+      </div>
       </div>
     );
   }

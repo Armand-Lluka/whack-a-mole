@@ -1,22 +1,16 @@
 import React from 'react';
-class Stuff extends React.Component {
+// import Grid from '../grid/grid.js'
+
+class Timers extends React.Component {
   state = {
       running: false,
-      mRunning: false,
       time: 120,
-      moletime: 300
     }
   getSeconds = () => {
       return ('0'+ this.state.time%60).slice(-2);        
   }
   getMinutes = () => {
       return Math.floor(this.state.time/60);
-  }
-  moleSeconds = () => {
-      return Math.floor(this.state.moletime/100);
-  }
-  moleMSeconds = () => {
-      return ('0' + this.state.moletime%100).slice(-2);
   }
  
     timer = () => {
@@ -33,39 +27,7 @@ class Stuff extends React.Component {
         }
       )
     }
-    moleTimer = () => {
-      this.setState(prevState => {
-        const _this = this;
-          let startTime = Date.now() - prevState.moletime;
-          let count = 50;
-          let setTime = 300;
-          this.moleTimer = setInterval(() => {
-              
-              if(_this.state.moletime>0 && count>0){
-            this.setState({ moletime: Math.ceil(setTime- (Date.now() - startTime)/10) });
-            console.log('success');
-            
-          }
-          else if (count>0){
-              count-=1;
-              console.log(count);
-              if(count !== 0){
-              setTime = 50+150*Math.random();
-              startTime =Date.now() - prevState.moletime;
-              console.log(setTime);
-              this.setState({moletime: setTime});
-              }
-              else {
-                clearInterval(this.moleTimer)
-            }
-          }
-          
-          }, 100);
-        
-        return { mRunning: !prevState.mRunning };
-        }
-      )
-    }
+    
     render() {
       
       return (
@@ -74,14 +36,12 @@ class Stuff extends React.Component {
           <button onClick={this.timer}>
             WHACK SOME MOLES
           </button>
-          <h1>{this.moleSeconds()}:{this.moleMSeconds()}</h1>
-          <button onClick={this.moleTimer}>
-            {this.state.running ? 'Pause' : 'Start'}
-          </button>
+          {/* <Grid /> */}
+          
         </div>
       );
     }
   }
 
 
-export default Stuff;
+export default Timers;

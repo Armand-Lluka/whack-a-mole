@@ -6,6 +6,8 @@ import Grid from './components/grid/grid'
 import Stuff from './components/additional-components/additional-components'
 
 const App = () => (
+
+  
     <main>
     <h1>Whack a mole</h1> 
       <Stuff/> 
