@@ -52,6 +52,10 @@ html {
   max-width: 15vh;
 }
 
+.hiddenMole {
+  display: none;
+}
+
 .mole:active {
   cursor: url(./icons/hammer-down.svg), auto;
 }
