@@ -1,22 +1,57 @@
 h1 {
-    color: blue;
+  color: blue;
 }
 
 .grid-container {
-    display: grid;
-    /* border: 1px solid black; */
-    width: 80%;
-    margin: auto;
-    grid-template-columns: 33% 33% 33%;
-    /* grid-template-rows: 33% 33% 33% */
+  /* top: 20%; */
+  display: grid;
+  /* border: 1px solid black; */
+  width: 50%;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: 33% 33% 33%;
+  row-gap: 110px;
+  column-gap: 20px;
 }
 .grid-container div {
-    border: 1px solid black;
-    height: 20vh;
+  /* border: 1px solid black; */
+  height: 15vmin;
+}
+
+.mole-hole {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: -1;
+}
+.mole-hole img {
+  min-width: 5vh;
+  max-height: 15vh;
+  /* margin: 0 auto; */
+  display: block;
+  /* z-index: -1; */
+  position: relative;
+}
+
+.mole-hole img:nth-child(2) {
+  bottom: 135px;
 }
 
 html {
-        /* width:100px;
-    height:100px; */
- cursor:url(./icons/hammer.svg), auto;
+  cursor: url(./icons/hammer.svg), auto;
+}
+
+.mole {
+  max-width: 15vh;
+}
+
+.mole:active {
+  cursor: url(./icons/hammer-down.svg), auto;
 }
