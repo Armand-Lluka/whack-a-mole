@@ -1,5 +1,5 @@
 import React from 'react'
-
+import mole from '../../../public/icons/mole.jpg'
 
 class Grid extends React.Component {
 
