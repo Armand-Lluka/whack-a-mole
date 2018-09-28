@@ -11,7 +11,7 @@ const App = () => (
     <main>
     <h1>Whack a mole</h1> 
       <Stuff/> 
-      <Grid/>
+      
     </main>
     
   );

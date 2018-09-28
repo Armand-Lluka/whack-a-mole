@@ -29,12 +29,13 @@ class Grid extends React.Component {
   moleSpawn = () => {
     const pos = Math.floor(this.state.moleRay.length * Math.random());
     let change = this.state.moleRay[pos];
-    // this.setState({moleRay2: this.state.moleRay2.push(this.state.moleRay.splice(pos,1))});
+    console.log("mr2", this.state.moleRay2)
+    console.log("mr", this.state.moleRay)
     this.setState({moleRay: this.state.moleRay.filter(word =>  word!==change)});
     console.log(this.state.moleRay);
     
     console.log(this.state.moleRay2)
-    this.setState({change: 'mole'});
+    this.setState({[change]: 'mole'});
   }
   moleTimer = () => {
     this.setState(prevState => {
@@ -68,48 +69,56 @@ class Grid extends React.Component {
   }
   whacked1 = () => {
     console.log('workin');
-    if(this.state.mole1 === 'mole');
     this.setState({mole1: "hiddenMole"});
+    this.setState({moleRay: this.state.moleRay.concat('mole1')});
   }
   whacked2 = () => {
     console.log('workin');
     if(this.state.mole2 === 'mole');
-    this.setState({mole2: "hiddenMole"});
+    this.setState({mole2: "hiddenMole"})
+    this.setState({moleRay: this.state.moleRay.concat('mole2')});;
   }
   whacked3 = () => {
     console.log('workin');
     if(this.state.mole3 === 'mole');
     this.setState({mole3: "hiddenMole"});
+    this.setState({moleRay: this.state.moleRay.concat('mole3')});
   }
   whacked4 = () => {
     console.log('workin');
     if(this.state.mole4 === 'mole');
     this.setState({mole4: "hiddenMole"});
+    this.setState({moleRay: this.state.moleRay.concat('mole4')});
   }
   whacked5 = () => {
     console.log('workin');
     if(this.state.mole5 === 'mole');
     this.setState({mole5: "hiddenMole"});
+    this.setState({moleRay: this.state.moleRay.concat('mole5')});
   }
   whacked6 = () => {
     console.log('workin');
     if(this.state.mole6 === 'mole');
     this.setState({mole6: "hiddenMole"});
+    this.setState({moleRay: this.state.moleRay.concat('mole6')});
   }
   whacked7 = () => {
     console.log('workin');
     if(this.state.mole7 === 'mole');
     this.setState({mole7: "hiddenMole"});
+    this.setState({moleRay: this.state.moleRay.concat('mole7')});
   }
   whacked8 = () => {
     console.log('workin');
     if(this.state.mole8 === 'mole');
     this.setState({mole8: "hiddenMole"});
+    this.setState({moleRay: this.state.moleRay.concat('mole8')});
   }
   whacked9 = () => {
     console.log('workin');
     if(this.state.mole9 === 'mole');
     this.setState({mole9: "hiddenMole"});
+    this.setState({moleRay: this.state.moleRay.concat('mole9')});
   }
 
   render() {
