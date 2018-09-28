@@ -1,5 +1,6 @@
 h1 {
   color: blue;
+  text-align: center;
 }
 
 .grid-container {
@@ -62,4 +63,14 @@ html {
 
 #score {
   text-align: center;
+}
+#background {
+  background-image: url('./image/brown_patch.jpg');
+  background-size: cover;
+}
+
+h2 {
+  font-size: 4rem;
+  background-color: rgba(255, 105, 180, 0.384);
+  color: white;
 }
