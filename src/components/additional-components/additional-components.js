@@ -26,7 +26,7 @@ class Timers extends React.Component {
               if(_this.state.time>0){
             this.setState({ time: Math.ceil(120 - (Date.now() - startTime)/1000) });
           }
-          else {
+          else if (this.child.moleTimer) {
             console.log('works and id is', this.timer)
             clearInterval(this.child.moleTimer);
           }
