@@ -78,7 +78,7 @@ class Grid extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="background">
         <div id="score">
           <h2>{this.state.score}</h2>
         </div>

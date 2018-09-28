@@ -9,7 +9,7 @@ const App = () => (
 
   
     <main>
-    <h1>Whack a mole</h1> 
+    <h1>Holey Moley!!</h1> 
       <Stuff/> 
       
     </main>
