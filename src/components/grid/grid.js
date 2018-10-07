@@ -1,5 +1,14 @@
 import React from "react";
 import mole from "../../../public/icons/mole.jpg";
+import trump1 from "../../../public/image/trump1.png";
+import trump2 from "../../../public/image/trump2.png";
+import trump3 from "../../../public/image/trump3.png";
+import trump4 from "../../../public/image/trump4.png";
+import trump5 from "../../../public/image/trump5.png";
+import trump6 from "../../../public/image/trump6.png";
+import trump7 from "../../../public/image/trump7.png";
+import trump8 from "../../../public/image/trump8.png";
+import trump9 from "../../../public/image/trump9.png";
 import hole from "../../../public/icons/hole.png";
 
 
@@ -88,7 +97,7 @@ class Grid extends React.Component {
         <div id="box-1">
           <div  className="mole-hole">
           {
-            this.state.mole1 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole1} src={mole} />)
+            this.state.mole1 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole1} src={trump1} />)
           }
             <img src={hole} />
           
@@ -97,7 +106,7 @@ class Grid extends React.Component {
         <div id="box-2">
           <div className="mole-hole">
           {
-            this.state.mole2 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole2} src={mole} />)
+            this.state.mole2 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole2} src={trump2} />)
           }
             <img src={hole} />
           </div>
@@ -105,7 +114,7 @@ class Grid extends React.Component {
         <div id="box-3">
           <div className="mole-hole">
           {
-            this.state.mole3 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole3} src={mole} />)
+            this.state.mole3 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole3} src={trump3} />)
           }
             <img src={hole} />
           </div>
@@ -113,7 +122,7 @@ class Grid extends React.Component {
         <div id="box-4">
           <div className="mole-hole">
           {
-            this.state.mole4 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole4} src={mole} />)
+            this.state.mole4 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole4} src={trump4} />)
           }
             <img src={hole} />
           </div>
@@ -121,7 +130,7 @@ class Grid extends React.Component {
         <div id="box-5">
           <div className="mole-hole">
           {
-            this.state.mole5 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole5} src={mole} />)
+            this.state.mole5 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole5} src={trump5} />)
           }
             <img src={hole} />
           </div>
@@ -129,7 +138,7 @@ class Grid extends React.Component {
         <div id="box-6">
           <div className="mole-hole">
           {
-            this.state.mole6 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole6} src={mole} />)
+            this.state.mole6 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole6} src={trump6} />)
           }
             <img src={hole} />
           </div>
@@ -137,7 +146,7 @@ class Grid extends React.Component {
         <div id="box-7">
           <div className="mole-hole">
           {
-            this.state.mole7 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole7} src={mole} />)
+            this.state.mole7 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole7} src={trump7} />)
           }
             <img src={hole} />
           </div>
@@ -145,7 +154,7 @@ class Grid extends React.Component {
         <div id="box-8">
           <div className="mole-hole">
           {
-            this.state.mole8 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole8} src={mole} />)
+            this.state.mole8 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole8} src={trump8} />)
           }
             <img src={hole} />
           </div>
@@ -153,7 +162,7 @@ class Grid extends React.Component {
         <div id="box-9">
           <div className="mole-hole">
           {
-            this.state.mole9 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole9} src={mole} />)
+            this.state.mole9 === 'mole' && (<img  onClick={this.whacked}className={this.state.mole9} src={trump9} />)
           }
             <img src={hole} />
           </div>

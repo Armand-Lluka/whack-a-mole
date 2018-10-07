@@ -31,6 +31,7 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   z-index: -1;
+  /* position: relative; */
 }
 .mole-hole img {
   min-width: 5vh;
